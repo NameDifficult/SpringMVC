@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>requestAndResponse</title>
+</head>
+<body>
+<form th:action="@{/testRequestBody}" method="post">
+  <input type="text" name="username">
+  <input type="password" name="password">
+  <input type="submit" value="test@RequestBody">
+</form>
+<hr>
+<br>
+<form th:action="@{/testRequestEntity}" method="post">
+  <input type="text" name="username">
+  <input type="password" name="password">
+  <input type="submit" value="testRequestEntity">
+</form>
+<hr>
+<br>
+<a th:href="@{/testResponseBody}">testResponseBody</a>
+<hr>
+<br>
+<a th:href="@{/testResponseBodyReturnUser}">testResponseBodyReturnUser</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h1>首页</h1>
+<a th:href="@{/hello/helloTarget}">跳转</a>
+<form th:action="@{/hello/helloTarget}" method="post">
+    <input type="submit">
+</form>
+<a th:href="@{/hello/test1}">ant风格路径 ？= 1</a><br>
+<a th:href="@{/hello/test2}">ant风格路径 ？= 2</a><br>
+<a th:href="@{/hello/testPath/123/admin}">测试requestMapping支持路径中的占位符</a>
+</body>
+</html>

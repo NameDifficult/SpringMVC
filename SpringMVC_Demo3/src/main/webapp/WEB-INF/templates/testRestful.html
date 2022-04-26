@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/users}">查询所有用户信息</a><br>
+<a th:href="@{/users/1}">根据id查询用户信息</a><br>
+
+<form th:action="@{/users}" method="post">
+    用户名：<input type="text" name="username"><br>
+    密 码：<input type="password" name="password"><br>
+    <input type="submit">
+</form>
+<hr>
+<form th:action="@{/users}" method="post">
+    <input type="hidden" name="_method" value="PUT">
+    用户名：<input type="text" name="username"><br>
+    密 码：<input type="password" name="password"><br>
+    <input type="submit" value="修改">
+</form>
+<hr>
+
+</body>
+</html>
